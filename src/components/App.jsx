@@ -42,7 +42,7 @@ export const App = () => {
     contacts.filter(({ name }) => name.toLowerCase().includes(filter)) ||
     contacts;
 
-  const onDelete = id => setContacts(contacts.filter(item => item.id !== id));
+  const onDelete = id => setContacts(state => state.filter(el => el.id !== id));
 
   return (
     <>
