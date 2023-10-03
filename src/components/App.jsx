@@ -8,8 +8,8 @@ import { Notification } from './Notification/Notification';
 import { nanoid } from 'nanoid';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(() =>
-    JSON.parse(window.localStorage.getItem('contacts') ?? [])
+  const [contacts, setContacts] = useState(
+    () => JSON.parse(window.localStorage.getItem('contacts')) ?? []
   );
   const [filter, setFilter] = useState('');
 
