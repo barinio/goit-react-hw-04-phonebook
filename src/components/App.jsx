@@ -33,7 +33,7 @@ export const App = () => {
 
   const addNewContact = ({ name, number }) => {
     const newContact = { id: nanoid(), name, number };
-    setContacts([...contacts, newContact]);
+    setContacts(state => [...state, newContact]);
   };
 
   const onChangeFilter = ({ target }) => setFilter(target.value.toLowerCase());
